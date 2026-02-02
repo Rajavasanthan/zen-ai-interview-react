@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import { useNavigate, useParams } from "react-router";
-
+import config from "../config";
 function Conversation() {
   const [message, setMessage] = useState("hi");
   const [messages, setMessages] = useState([]);

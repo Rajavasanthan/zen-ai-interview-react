@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { useState } from "react";
+import config from "../config";
 
 function CreateSession() {
   const navigate = useNavigate();
