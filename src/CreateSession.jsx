@@ -18,7 +18,7 @@ function CreateSession() {
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        const session = await axios.post("http://localhost:3000/create-session", values);
+        const session = await axios.post(`${config.api}/create-session`, values);
         navigate(`/conversation/${session.data.sessionId}`);
       } catch (error) {
         alert("Error creating session: " + error.message);

@@ -25,7 +25,7 @@ function Conversation() {
       // Logic to fetch and display conversation based on session ID
       try {
         const conversation = await axios.post(
-          `http://localhost:3000/conversation/${id}`,
+          `${config.api}/conversation/${id}`,
           {
             message,
           },
@@ -60,7 +60,7 @@ function Conversation() {
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/conversation/${id}`,
+        `${config.api}/conversation/${id}`,
         {
           message: currentMsg,
         },

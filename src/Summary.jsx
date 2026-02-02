@@ -21,7 +21,7 @@ function Summary() {
     useEffect(() => {
         const fetchSummary = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/summary/${id}`);
+                const response = await axios.get(`${config.api}/summary/${id}`);
                 setData(response.data);
                 setLoading(false);
             } catch (err) {
